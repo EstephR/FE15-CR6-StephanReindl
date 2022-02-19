@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {path:"cart", component: CartComponent
   },
-  {path:"dish/:productId", component: MenuDetailsComponent
+  {path:"menu/:productId", component: MenuDetailsComponent
   }
 ];
 

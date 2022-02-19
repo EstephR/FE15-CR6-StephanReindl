@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+.h1 {
+    font-family: $headline-font;
+}
+
+.btn {
+    font-weight: bold;
+    background: $main-color !important;
+    border: 2px solid $main-color !important;
+    width: 100%;
+    &:hover {
+        background: transparent !important;
+        color: $main-color;
+    }
+}

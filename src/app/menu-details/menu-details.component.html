@@ -1,1 +1,14 @@
-<p>menu-details works!</p>
+<div class="container">
+    <h1 class="h1 text-center m-5">Menu Details</h1>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gap-5 justify-content-center mb-5">
+        <div class="card p-0 border-0" style="width: 15rem;">
+            <img src="{{menuDetails.img}}" height="250" style="object-fit:cover; object-position:center" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{menuDetails.name}}</h5>
+                <p class="card-text">{{menuDetails.price | currency:"EUR" }}</p>
+                <a (click)="addToCart()" class="btn btn-primary text-center">Order</a>
+            </div>
+        </div>
+    </div>
+</div>

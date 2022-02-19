@@ -12,7 +12,7 @@
                 <hr>
                 <ng-template [ngIf]="dish.availability" [ngIfElse]="noTrue">
                     <div class="d-flex justify-content-left">
-                        <a class="btn btn-details btn-primary me-4" routerLink="products/{{productId}}">Details</a>
+                        <a class="btn btn-details btn-primary me-4" routerLink="{{productId}}">Details</a>
                         <a href="#" class="btn btn-primary">Order</a>
                     </div>
                 </ng-template>

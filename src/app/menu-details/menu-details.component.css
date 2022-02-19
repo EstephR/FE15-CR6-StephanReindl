@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.h1 {
+  font-family: "Great Vibes", cursive;
+}
+
+.btn {
+  font-weight: bold;
+  background: #872f00 !important;
+  border: 2px solid #872f00 !important;
+  width: 100%;
+}
+.btn:hover {
+  background: transparent !important;
+  color: #872f00;
+}/*# sourceMappingURL=menu-details.component.css.map */

@@ -1,1 +1,14 @@
-<p>cart works!</p>
+<div class="container">
+    <h1 class="h1 text-center m-5">Menu Details</h1>
+
+    <div class="cart-item d-flex justify-content-top" *ngFor="let item of items">
+        <div class="card d-flex" style="width: 18rem;">
+            <img src="{{item.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+            </div>
+            <div class="cart-price">{{ item.price | currency:"EUR" }}</div>
+        </div>
+    </div>
+</div>

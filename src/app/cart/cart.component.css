@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap");
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+}
+
+.cart-img-container {
+  width: 10%;
+  height: 10vh;
+}
+.cart-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=cart.component.css.map */
