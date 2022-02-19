@@ -8,15 +8,32 @@ h1 {
   font-family: "Great Vibes", cursive;
 }
 
-.cart-img-container {
-  width: 10%;
-  height: 10vh;
+.cart-container {
+  width: 60%;
 }
-.cart-img-container img {
-  width: 100%;
-  height: 100%;
+
+.sum-container {
+  width: 30%;
+}
+
+.cart-img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  width: 20%;
+  height: 20%;
+}
+
+.cart-headline {
+  background: #872f00;
+  color: #f9ba21;
+}
+
+.cart-text {
+  width: 60%;
+}
+
+.cart-price {
+  width: 20%;
 }/*# sourceMappingURL=cart.component.css.map */

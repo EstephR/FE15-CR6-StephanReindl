@@ -2,3 +2,31 @@
 h1 {
     font-family: $headline-font;
 }
+
+.cart-container {
+    width: 60%;
+}
+
+.sum-container {
+    width: 30%;
+}
+
+.cart-img {
+    object-fit: cover;
+    object-position: center;
+    width: 20%;
+    height: 20%;
+}
+
+.cart-headline {
+    background: $main-color;
+    color: $secondary-color;
+}
+
+.cart-text {
+    width: 60%;
+}
+
+.cart-price {
+    width: 20%;
+}
