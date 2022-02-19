@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { menu } from '../dataMenu';
 import { IMenu } from '../dataInterfaceMenu';
+import { menu } from '../dataMenu';
+
 
 
 
@@ -21,6 +22,5 @@ export class MenuDetailsComponent implements OnInit {
      this.id = +params['productId'];
      this.menuDetail = menu[this.id];
    });
- 
   }
  }

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { MenuDetailsComponent } from './menu-details/menu-details.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
+import { MenuDetailsComponent } from './menu-details/menu-details.component';
+
 
 const routes: Routes = [
   {path:"", component: HomePageComponent
@@ -12,7 +14,9 @@ const routes: Routes = [
   },
   {path:"menu", component: MenuComponent
   },
-  {path:"products/:productId", component: MenuDetailsComponent
+  {path:"cart", component: CartComponent
+  },
+  {path:"dish/:productId", component: MenuDetailsComponent
   }
 ];
 
