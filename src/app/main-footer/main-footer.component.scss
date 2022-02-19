@@ -1,0 +1,14 @@
+@import '../../styles.scss';
+.footer-headline {
+    font-family: $headline-font;
+    font-size: 2em;
+    letter-spacing: 0.5vw;
+}
+
+.social-media {
+    width: 25%;
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+h1 {
+    font-family: $headline-font;
+}
+
+hr {
+    height: 2px;
+    color: $main-color;
+}
+
+.btn {
+    font-weight: bold;
+    background: $main-color !important;
+    border: 2px solid $main-color !important;
+    &:hover {
+        background: transparent !important;
+        color: $main-color;
+    }
+}
+
+.btn-details {
+    background: $secondary-color !important;
+    border: 2px solid $secondary-color !important;
+    &:hover {
+        color: $secondary-color;
+    }
+}
