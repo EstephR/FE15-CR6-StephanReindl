@@ -1,7 +1,7 @@
-@import '../../styles.scss';
+@import '../../assets/variables';
 .footer-headline {
     font-family: $headline-font;
-    font-size: 2em;
+    font-size: 4vw;
     letter-spacing: 0.5vw;
 }
 
@@ -10,5 +10,20 @@
     .social-icon {
         width: 25px;
         height: 25px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-m) {
+    .footer-headline {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: $breakpoint-s) {
+    .footer-headline {
+        font-size: 8vw;
+    }
+    .footer-text {
+        font-size: 0.5em;
     }
 }

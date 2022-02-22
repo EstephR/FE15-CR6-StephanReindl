@@ -3,7 +3,7 @@
 
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gap-5 justify-content-center mb-5">
         <div class="card p-0 border-0" style="width: 18rem;" *ngFor="let dish of menu; index as productId">
-            <img src="{{dish.img}}" height="300" style="object-fit:cover; object-position:center" class="card-img-top" alt="...">
+            <img src="{{dish.img}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{dish.name}}</h5>
                 <p class="card-text">{{dish.description}}</p>
@@ -13,7 +13,7 @@
                 <ng-template [ngIf]="dish.availability" [ngIfElse]="noTrue">
                     <div class="d-flex justify-content-left">
                         <a class="btn btn-details btn-primary me-4" routerLink="{{productId}}">Details</a>
-                        <a href="#" class="btn btn-primary">Order</a>
+                        <a (click)="addToCart(dish)" class="btn btn-primary">Order</a>
                     </div>
                 </ng-template>
                 <ng-template #noTrue>

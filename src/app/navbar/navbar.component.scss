@@ -1,28 +1,47 @@
-@import '../../styles.scss';
+@import '../../assets/variables';
 .navbar {
     height: 20vh;
     z-index: 1;
+    .logo {
+        width: 8vw;
+        height: 8vw;
+    }
+    .logo-text {
+        font-family: $headline-font;
+        font-size: 4vw;
+    }
+    .navbar-nav {
+        width: 60%;
+        .nav-item {
+            width: 25%;
+            text-align: center;
+            a {
+                padding: 10px;
+                font-weight: bold;
+                &:hover {
+                    background: $main-color;
+                }
+            }
+        }
+    }
 }
 
-.navbar-nav {
-    width: 50%;
+@media screen and (max-width: $breakpoint-m) {
+    .logo {
+        width: 12vw;
+        height: 12vw;
+    }
+    .logo-text {
+        font-size: 6vw;
+    }
 }
 
-.logo {
-    width: 8vw;
-    height: 8vw;
-}
-
-.logo-text {
-    font-family: $headline-font;
-    font-size: 3vw;
-}
-
-.nav-item>a {
-    margin: 10px;
-    padding: 10px;
-    font-weight: bold;
-    &:hover {
-        background: $main-color;
+@media screen and (max-width: $breakpoint-s) {
+    .logo {
+        width: 13vw;
+        height: 13vw;
+    }
+    .logo-text {
+        font-size: 7vw;
     }
 }

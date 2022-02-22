@@ -1,9 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap");
-body {
-  font-family: "Quicksand", sans-serif;
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -28,17 +22,37 @@ body {
 }
 .hero .hero-text-container .hero-headline {
   font-family: "Great Vibes", cursive;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 .hero .hero-text-container .hero-text {
+  font-size: 2vw;
   letter-spacing: 0.3vw;
   font-weight: bold;
 }
 .hero .hero-text-container .btn {
   font-weight: bold;
-  background: #872f00 !important;
-  border: 2px solid #872f00 !important;
+  background: #872f00;
+  border: 2px solid #872f00;
 }
 .hero .hero-text-container .btn:hover {
-  background: transparent !important;
+  background: transparent;
+}
+
+@media screen and (max-width: 675px) {
+  .hero-headline {
+    font-size: 6vw !important;
+  }
+
+  .hero-text {
+    font-size: 2.5vw !important;
+  }
+}
+@media screen and (max-width: 415px) {
+  .hero-headline {
+    font-size: 8vw !important;
+  }
+
+  .hero-text {
+    font-size: 3.5vw !important;
+  }
 }/*# sourceMappingURL=home-page.component.css.map */

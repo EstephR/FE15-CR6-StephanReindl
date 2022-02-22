@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../assets/variables';
 .hero {
     position: relative;
     width: 100%;
@@ -19,19 +19,42 @@
         color: white;
         .hero-headline {
             font-family: $headline-font;
-            font-size: 4vw;
+            font-size: 5vw;
         }
         .hero-text {
+            font-size: 2vw;
             letter-spacing: 0.3vw;
             font-weight: bold;
         }
         .btn {
             font-weight: bold;
-            background: $main-color !important;
-            border: 2px solid $main-color !important;
+            background: $main-color;
+            border: 2px solid $main-color;
             &:hover {
-                background: transparent !important;
+                background: transparent;
             }
         }
+    }
+}
+
+@media screen and (max-width: $breakpoint-m) {
+    .hero-headline {
+        //doesnt work without !important
+        font-size: 6vw !important;
+    }
+    .hero-text {
+        //doesnt work without !important
+        font-size: 2.5vw !important;
+    }
+}
+
+@media screen and (max-width: $breakpoint-s) {
+    .hero-headline {
+        //doesnt work without !important
+        font-size: 8vw !important;
+    }
+    .hero-text {
+        //doesnt work without !important
+        font-size: 3.5vw !important;
     }
 }

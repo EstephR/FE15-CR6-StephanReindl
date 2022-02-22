@@ -1,33 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap");
-body {
-  font-family: "Quicksand", sans-serif;
-}
-
 .navbar {
   height: 20vh;
   z-index: 1;
 }
-
-.navbar-nav {
-  width: 50%;
-}
-
-.logo {
+.navbar .logo {
   width: 8vw;
   height: 8vw;
 }
-
-.logo-text {
+.navbar .logo-text {
   font-family: "Great Vibes", cursive;
-  font-size: 3vw;
+  font-size: 4vw;
 }
-
-.nav-item > a {
-  margin: 10px;
+.navbar .navbar-nav {
+  width: 60%;
+}
+.navbar .navbar-nav .nav-item {
+  width: 25%;
+  text-align: center;
+}
+.navbar .navbar-nav .nav-item a {
   padding: 10px;
   font-weight: bold;
 }
-.nav-item > a:hover {
+.navbar .navbar-nav .nav-item a:hover {
   background: #872f00;
+}
+
+@media screen and (max-width: 675px) {
+  .logo {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .logo-text {
+    font-size: 6vw;
+  }
+}
+@media screen and (max-width: 415px) {
+  .logo {
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .logo-text {
+    font-size: 7vw;
+  }
 }/*# sourceMappingURL=navbar.component.css.map */

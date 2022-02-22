@@ -1,12 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap");
-body {
-  font-family: "Quicksand", sans-serif;
-}
-
 .footer-headline {
   font-family: "Great Vibes", cursive;
-  font-size: 2em;
+  font-size: 4vw;
   letter-spacing: 0.5vw;
 }
 
@@ -16,4 +10,19 @@ body {
 .social-media .social-icon {
   width: 25px;
   height: 25px;
+}
+
+@media screen and (max-width: 675px) {
+  .footer-headline {
+    font-size: 6vw;
+  }
+}
+@media screen and (max-width: 415px) {
+  .footer-headline {
+    font-size: 8vw;
+  }
+
+  .footer-text {
+    font-size: 0.5em;
+  }
 }/*# sourceMappingURL=main-footer.component.css.map */

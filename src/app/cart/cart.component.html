@@ -1,27 +1,54 @@
 <h1 class="h1 text-center m-5">Your Order</h1>
-<div class="container d-flex justify-content-between align-items-top">
+<div class="container cart-sum-container d-flex justify-content-between align-items-top">
     <div class="cart-container mb-5">
         <div class="cart-headline h4 p-2">Cart</div>
-        <div class="cart-item d-flex justify-content-top" *ngFor="let item of items">
-            <img class="cart-img me-3" src="{{item.img}}">
-            <div class="cart-text me-3">
-                <h3 class="h5">{{item.name}}</h3>
-                <p>{{item.description}}</p>
+        <div class="cart-item d-flex justify-content-top mb-3" *ngFor="let item of items">
+            <div class="cart-img-container me-3">
+                <img class="cart-img" src="{{item.img}}">
             </div>
-            <div class="cart-price">{{ item.price | currency:"EUR" }}</div>
-            <hr>
+            <div class="cart-text me-3">
+                <h5 class="h5 cart-h5">{{item.name}}</h5>
+                <p class="cart-p">{{item.description}}</p>
+            </div>
+            <div class="cart-price text-end me-4">{{ item.price | currency:"EUR" }}</div>
         </div>
     </div>
     <div class="sum-container mb-5">
         <div class="cart-headline h4 p-2">Summary</div>
+        <div class="sum-products d-flex justify-content-between ms-2 me-2">
+            <p>Products</p>
+            <p>{{product | currency:"EUR" }}</p>
+        </div>
+        <div class="service-products d-flex justify-content-between ms-2 me-2">
+            <p>Service</p>
+            <p>{{service | currency:"EUR" }}</p>
+        </div>
+        <ng-template [ngIf]="discount > 0">
+            <div class="discount-products d-flex justify-content-between ms-2 me-2">
+                <p>Discount</p>
+                <p>{{discount | currency:"EUR" }}</p>
+            </div>
+        </ng-template>
+        <hr>
+        <div class="total-products d-flex justify-content-between ms-2 me-2">
+            <p class="total">Total Amount</p>
+            <p class="total">{{total | currency:"EUR" }}</p>
+        </div>
+        <ng-template [ngIf]="discount > 0">
+            <div class="total-products d-flex justify-content-between ms-2 me-2">
+                <p class="total">Discounted Amount</p>
+                <p class="total">{{discountedAmount | currency:"EUR" }}</p>
+            </div>
+        </ng-template>
     </div>
 </div>
-
-<!-- <div class="card d-flex" style="width: 18rem;">
-    <img src="{{item.img}}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">{{item.description}}</p>
-    </div>
-    <div class="cart-price">{{ item.price | currency:"EUR" }}</div>
-</div> -->
+<h1 class="h1 text-center mt-5 mb-3">Order Form</h1>
+<div class="container">
+    <form class="d-flex flex-column justify-content-center align-items-center" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <input class="m-2 p-2" type="text" placeholder="Your First Name" formControlName="fname">
+        <input class="m-2 p-2" type="text" placeholder="Your Last Name" formControlName="lname">
+        <input class="m-2 p-2" type="text" placeholder="Your Address" formControlName="address">
+        <input class="m-2 p-2" type="email" placeholder="Your E-Mail" formControlName="email">
+        <button class="btn btn-primary text-center mt-3 mb-5" type="submit">Order</button>
+    </form>
+</div>

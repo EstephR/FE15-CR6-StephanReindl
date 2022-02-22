@@ -1,15 +1,21 @@
-@import '../../styles.scss';
+@import '../../assets/variables';
 .h1 {
     font-family: $headline-font;
 }
 
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+    height: 250px;
+}
+
 .btn {
     font-weight: bold;
-    background: $main-color !important;
-    border: 2px solid $main-color !important;
+    background: $main-color;
+    border: 2px solid $main-color;
     width: 100%;
     &:hover {
-        background: transparent !important;
+        background: transparent;
         color: $main-color;
     }
 }
